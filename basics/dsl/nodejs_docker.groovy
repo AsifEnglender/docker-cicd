@@ -13,7 +13,7 @@ job('NodeJS Docker example') {
     steps {
         dockerBuildAndPublish {
             repositoryName('asifeng/newjenkinstest2')
-            tag('${GIT_REVISION,length=9}')
+            tag('test')
             registryCredentials('c5c3af58-5a12-40a9-bb06-4b7d99655c03')
             buildContext('./basics/')
             forcePull(false)
