@@ -8,13 +8,14 @@ node {
    stage('test') {
       
        def myTestContainer = docker.image('node:4.6')
-       sh '''
+      
+       myTestContainer.pull()
+       myTestContainer.inside {
+          sh '''
          sh 'basics'
          sh 'npm install --only=dev'
              sh 'npm test'
        '''
-       myTestContainer.pull()
-       myTestContainer.inside {
          
      }
    }
