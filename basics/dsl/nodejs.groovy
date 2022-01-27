@@ -16,4 +16,3 @@ job('NodeJS example') {
         shell("npm install")
     }
 }
-
