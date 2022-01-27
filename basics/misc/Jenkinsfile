@@ -16,7 +16,7 @@ node {
    stage('docker build/push') {
      dir("basics"){
        docker.withRegistry('https://index.docker.io/v1/', 'c5c3af58-5a12-40a9-bb06-4b7d99655c03') {
-         def app = docker.build("AsifEng/docker-nodejs-demo:${commit_id}", '.').push()
+         def app = docker.build("asifeng/docker-nodejs-demo:${commit_id}", '.').push()
           
        }
        sh 'pwd'
