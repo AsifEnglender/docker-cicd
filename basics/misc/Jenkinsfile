@@ -15,7 +15,7 @@ node {
    }
    stage('docker build/push') {
      dir("basics"){
-       docker.withRegistry('https://index.docker.io/v1/', 'test3') {
+       docker.withRegistry('https://index.docker.io/v1/', 'test4') {
          def app = docker.build("asifeng/docker-nodejs-demo:${commit_id}", '.').push()
           
        }
